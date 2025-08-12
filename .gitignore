@@ -1,0 +1,45 @@
+# Dépendances
+node_modules/
+
+# Variables d'environnement
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Bases de données locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires et de backup
+*.backup
+*.bak
+*.old
+*.new
+*.tmp
+*_backup*
+*_bak*
+
+# Fichiers de test temporaires
+test-*.js
+debug*.js
+check-*.js
+!check-persistence.js
+
+# Triggers et fichiers de configuration temporaires
+.railway-trigger
+force-deploy.txt
+FORCE_UPDATE.txt
+
+# Dossier .vscode (IDE)
+.vscode/
+
+# Fichiers spécifiques au développement local
+Procfile
+railway.json

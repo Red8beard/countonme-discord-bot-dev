@@ -1,0 +1,12 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "npm start"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+# Configuration du volume persistant pour la base de données
+[[volumes]]
+name = "db_volume"
+mountPath = "/app/data"

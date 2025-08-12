@@ -1,0 +1,13 @@
+# Ignorer les bases de données locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Ignorer les backups
+*backup*.db
+
+# Ignorer les logs locaux
+*.log
+
+# Ignorer les fichiers de configuration locale
+.env.local

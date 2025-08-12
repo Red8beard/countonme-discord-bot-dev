@@ -1,0 +1,40 @@
+{
+  "name": "countonme-discord-bot",
+  "version": "1.0.0",
+  "description": "Bot Discord de Counting avec leaderboards et statistiques",
+  "main": "index.js",
+  "scripts": {
+    "prestart-disabled": "node simple_patch.js",
+    "start": "node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "dev:deploy": "cross-env NODE_ENV=development node deploy-commands.js",
+    "dev:deploy-guild": "cross-env NODE_ENV=development node deploy-commands-guild.js",
+    "prod": "cross-env NODE_ENV=production node index.js",
+    "prod:deploy": "cross-env NODE_ENV=production node deploy-commands.js",
+    "deploy": "node deploy-commands.js",
+    "diagnostic": "node diagnostic.js",
+    "test:cleanup": "node test-cleanup-roles.js",
+    "cleanup:force": "node manual-cleanup-roles.js",
+    "build": "npm install"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "counting",
+    "game"
+  ],
+  "author": "Jeremie Davidson",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
