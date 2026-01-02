@@ -21,7 +21,7 @@ class PostgresDatabase {
 
         this.pool = new Pool({
             connectionString: connectionString,
-            ssl: connectionString.includes('localhost') ? false : { rejectUnauthorized: false } // SSL requis sauf localhost
+            ssl: (connectionString.includes('localhost') || connectionString.includes('db-dev')) ? false : { rejectUnauthorized: false }
         });
 
         this.pool.on('error', (err) => {
